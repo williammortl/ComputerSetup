@@ -1,0 +1,16 @@
+com.discordapp.Discord	flathub	stable
+com.mattjakeman.ExtensionManager	flathub	stable
+com.slack.Slack	flathub	stable
+com.spotify.Client	flathub	stable
+io.github.dosbox-staging	fedora	stable
+io.github.stella_emu.Stella	flathub	stable
+io.github.ungoogled_software.ungoogled_chromium	flathub	stable
+org.gnome.Aisleriot	fedora	stable
+org.gnome.Calendar	fedora	stable
+org.gnome.Contacts	fedora	stable
+org.gnome.Mines	fedora	stable
+org.gnome.Quadrapassel	fedora	stable
+org.mozilla.firefox	flathub	stable
+org.mozilla.thunderbird	flathub	stable
+se.sjoerd.Graphs	flathub	stable
+us.zoom.Zoom	flathub	stable

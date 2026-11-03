@@ -1,0 +1,3 @@
+fedora	oci+https://registry.fedoraproject.org	oci
+fedora-testing	oci+https://registry.fedoraproject.org#testing	disabled,oci
+flathub	https://dl.flathub.org/repo/	filtered
