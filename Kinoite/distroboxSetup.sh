@@ -20,4 +20,10 @@ sudo dnf install --refresh code
 
 distrobox-export --app code
 
+# don't forget zoom!
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+
+
 
