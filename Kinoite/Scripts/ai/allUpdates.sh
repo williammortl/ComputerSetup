@@ -6,4 +6,3 @@ agy update
 codex update
 npm update -g
 cd ~/Code && ./update_all_git.sh
-

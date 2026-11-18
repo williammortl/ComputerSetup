@@ -1,5 +1,9 @@
 #!/usr/bin/bash
 
+mkdir Personal
+mkdir Code
+mkdir VMs
+
 sudo rpm-ostree install \
     chromium \
     distrobox \
@@ -66,5 +70,13 @@ systemctl is-enabled xrdp.service xrdp-sesman.service 2>&1
 echo
 echo "===== LISTENING SSH/RDP PORTS ====="
 sudo ss -lntp '( sport = :22 or sport = :3389 )'
+
+# flatpak access control
+flatpak override --user --nofilesystem=/var/home/wmortl/Personal
+flatpak override --user \
+  --filesystem=/var/home/wmortl/VMs/DOS:rw \
+  io.github.dosbox-staging
+flatpak override --user --show
+
 
 
