@@ -17,8 +17,6 @@ sudo rpm-ostree install \
     virt-manager \
     virt-viewer
 
-sudo usermod -aG libvirt $USER
-
 sudo flatpak install \
     org.gnome.Quadrapassel \
     org.gnome.Aisleriot \
@@ -28,7 +26,8 @@ sudo flatpak install \
     org.libreoffice.LibreOffice \
     org.mozilla.thunderbird \
     org.octave.Octave \
-    se.sjoerd.Graphs
+    se.sjoerd.Graphs \
+    io.dbeaver.DBeaverCommunity
 
 # Disable OpenSSH server and socket activation
 for unit in sshd.service sshd.socket; do
