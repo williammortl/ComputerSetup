@@ -35,6 +35,7 @@ WHITE='\[\e[97m\]'
 GREEN='\[\e[32m\]'
 YELLOW='\[\e[33m\]'
 RESET='\[\e[0m\]'
+
 PS1="🐧 ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
 
 export PATH="$PATH:/var/home/wmortl/Applications"
@@ -45,5 +46,5 @@ alias ai_status='virsh -c qemu:///system domstate "Fedora Server"'
 alias ai_console='virsh -c qemu:///system console "Fedora Server"'
 alias ai='ssh -Y room10'
 
-alias dev='distrobox enter development'
+alias dev='cd ~/Dev && distrobox enter development'
 
