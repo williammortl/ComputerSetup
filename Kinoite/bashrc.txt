@@ -43,7 +43,7 @@ if [ -n "$CONTAINER_ID" ]; then
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
     . "$HOME/.cargo/env"
 
-    PS1="📦 [${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
+    PS1="📦 ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
 else
     export PATH="$PATH:/var/home/wmortl/Applications"
 

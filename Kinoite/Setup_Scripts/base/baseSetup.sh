@@ -31,7 +31,8 @@ sudo flatpak install \
     org.mozilla.thunderbird \
     org.octave.Octave \
     se.sjoerd.Graphs \
-    io.dbeaver.DBeaverCommunity
+    io.dbeaver.DBeaverCommunity \
+    io.podman_desktop.PodmanDesktop
 
 # Disable OpenSSH server and socket activation
 for unit in sshd.service sshd.socket; do
