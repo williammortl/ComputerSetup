@@ -35,26 +35,15 @@ WHITE='\[\e[97m\]'
 GREEN='\[\e[32m\]'
 YELLOW='\[\e[33m\]'
 RESET='\[\e[0m\]'
+PS1="🐧 ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
 
-# Run only INSIDE a distrobox container
-if [ -n "$CONTAINER_ID" ]; then
-    export NVM_DIR="$HOME/.config/nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-    . "$HOME/.cargo/env"
+export PATH="$PATH:/var/home/wmortl/Applications"
+    
+alias ai_start='virsh -c qemu:///system start "Fedora Server"'
+alias ai_stop='virsh -c qemu:///system shutdown "Fedora Server"'
+alias ai_status='virsh -c qemu:///system domstate "Fedora Server"'
+alias ai_console='virsh -c qemu:///system console "Fedora Server"'
+alias ai='ssh -Y room10'
 
-    PS1="📦 ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
-else
-    export PATH="$PATH:/var/home/wmortl/Applications"
-
-    alias ai_start='virsh -c qemu:///system start "Fedora Server"'
-    alias ai_stop='virsh -c qemu:///system shutdown "Fedora Server"'
-    alias ai_status='virsh -c qemu:///system domstate "Fedora Server"'
-    alias ai_console='virsh -c qemu:///system console "Fedora Server"'
-    alias ai='ssh -Y room10'
-
-    alias dev='distrobox enter'
-
-    PS1="🐧 ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
-fi
+alias dev='distrobox enter development'
 
