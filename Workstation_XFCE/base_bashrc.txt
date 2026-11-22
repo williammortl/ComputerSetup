@@ -1,0 +1,44 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+unset rc
+
+alias cls='clear && fastfetch'
+alias ls='LC_ALL=C ls -X --group-directories-first --color=auto'
+alias dir='ls -l'
+alias dira='ls -la'
+
+BLUE='\[\e[38;5;81m\]'
+ORANGE='\[\e[38;5;202m\]'
+WHITE='\[\e[97m\]'
+GREEN='\[\e[32m\]'
+YELLOW='\[\e[33m\]'
+RESET='\[\e[0m\]'
+
+PS1="🐧 ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
+
+export PATH="$PATH:/var/home/wmortl/Applications"
+
+alias dev='cd ~/Dev && distrobox enter development'
+
