@@ -40,3 +40,28 @@ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 sudo systemctl enable --now docker
 sudo usermod -aG docker $USER
 
+curl -fL -o chatgpt.x86_64.rpm \
+  https://persistent.oaistatic.com/codex-app-prod/linux/rpm/latest/chatgpt.x86_64.rpm
+
+sudo dnf install ./chatgpt.x86_64.rpm
+
+cat >> ~/.bashrc <<'EOF'
+
+# Launch ChatGPT independently of the terminal
+alias gpt='setsid -f chatgpt --ozone-platform=x11 --disable-gpu </dev/null >/dev/null 2>&1'
+EOF
+
+source ~/.bashrc
+
+CON=$(nmcli -g GENERAL.CONNECTION device show enp1s0)
+
+sudo nmcli connection modify "$CON" \
+  ipv4.method manual \
+  ipv4.addresses 192.168.122.101/24 \
+  ipv4.gateway 192.168.122.1 \
+  ipv4.dns 192.168.122.1 \
+  connection.autoconnect yes
+
+sudo nmcli connection up "$CON"
+
+
