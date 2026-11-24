@@ -10,8 +10,6 @@ sudo rpm-ostree install \
     distrobox \
     fastfetch \
     git \
-    isoimagewriter \
-    kate \
     vim \
     neovim \
     qemu-kvm \

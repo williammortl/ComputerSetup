@@ -1,5 +1,5 @@
 #!/usr/bin/bash
 
-distrobox enter Dev -- bash -lc "~/distroboxUpdate.sh"
-distrobox enter Prod -- bash -lc "~/distroboxUpdate.sh"
+distrobox enter dev -- bash -lc "~/distroboxUpdate.sh"
+distrobox enter prod -- bash -lc "~/distroboxUpdate.sh"
 
