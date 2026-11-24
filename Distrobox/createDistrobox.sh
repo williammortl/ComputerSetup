@@ -4,18 +4,17 @@
 #   examples on how to create the distrobox
 
 # Regression fix
-#
-# distrobox create \
-#   --name Dev \
-#   --image registry.fedoraproject.org/fedora:45 \
-#   --home /var/home/wmortl/Dev \
-#   --dry-run \
-#   | sed 's/:ro:rslave/:ro,rslave/g' \
-#   | tr '\n' ' ' \
-#   | sh
-
 distrobox create \
   --name Dev \
   --image registry.fedoraproject.org/fedora:45 \
-  --home /var/home/wmortl/Dev
+  --home /var/home/wmortl/Dev \
+  --dry-run \
+  | sed 's/:ro:rslave/:ro,rslave/g' \
+  | tr '\n' ' ' \
+  | sh
+
+# distrobox create \
+#   --name Dev \
+#   --image registry.fedoraproject.org/fedora:45 \
+#   --home /var/home/wmortl/Dev
 

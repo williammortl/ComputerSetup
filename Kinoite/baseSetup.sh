@@ -30,6 +30,8 @@ sudo flatpak install \
     org.libreoffice.LibreOffice \
     org.mozilla.thunderbird \
     org.gimp.GIMP \
+    org.kde.kate \
+    org.fedoraproject.MediaWriter \
     se.sjoerd.Graphs \
     io.dbeaver.DBeaverCommunity \
     io.podman_desktop.PodmanDesktop

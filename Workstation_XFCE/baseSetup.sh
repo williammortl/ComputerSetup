@@ -10,7 +10,6 @@ sudo dnf install \
     distrobox \
     fastfetch \
     git \
-    gedit \
     vim \
     neovim \
     qemu-kvm \
@@ -29,6 +28,8 @@ sudo flatpak install \
     org.libreoffice.LibreOffice \
     org.mozilla.thunderbird \
     org.gimp.GIMP \
+    org.gnome.gedit \
+    org.fedoraproject.MediaWriter \
     se.sjoerd.Graphs \
     io.dbeaver.DBeaverCommunity \
     io.podman_desktop.PodmanDesktop

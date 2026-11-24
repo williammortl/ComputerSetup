@@ -12,3 +12,4 @@ distrobox-export --app vlc
 
 # don't forget zoom!
 
+distrobox-export --app zoom
