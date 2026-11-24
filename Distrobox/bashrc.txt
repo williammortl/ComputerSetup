@@ -22,7 +22,7 @@ if [ -d ~/.bashrc.d ]; then
         fi
     done
 fi
-unset rc
+unset rc 
 
 alias cls='clear && fastfetch'
 alias ls='LC_ALL=C ls -X --group-directories-first --color=auto'
@@ -36,11 +36,10 @@ GREEN='\[\e[32m\]'
 YELLOW='\[\e[33m\]'
 RESET='\[\e[0m\]'
 
-PS1="📦 ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
+PS1="📦 ${WHITE}[${ORANGE}Dev${WHITE}] ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
 
 . "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-

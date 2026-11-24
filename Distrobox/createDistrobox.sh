@@ -6,7 +6,7 @@
 # Regression fix
 #
 # distrobox create \
-#   --name development \
+#   --name Dev \
 #   --image registry.fedoraproject.org/fedora:45 \
 #   --home /var/home/wmortl/Dev \
 #   --dry-run \
@@ -15,7 +15,7 @@
 #   | sh
 
 distrobox create \
-  --name development \
+  --name Dev \
   --image registry.fedoraproject.org/fedora:45 \
   --home /var/home/wmortl/Dev
 

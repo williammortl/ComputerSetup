@@ -29,6 +29,7 @@ sudo flatpak install \
     com.discordapp.Discord \
     org.libreoffice.LibreOffice \
     org.mozilla.thunderbird \
+    org.gimp.GIMP \
     se.sjoerd.Graphs \
     io.dbeaver.DBeaverCommunity \
     io.podman_desktop.PodmanDesktop
