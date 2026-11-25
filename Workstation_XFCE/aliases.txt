@@ -1,0 +1,9 @@
+# standard aliases
+alias cls='clear && fastfetch'
+alias ls='LC_ALL=C ls -X --group-directories-first --color=auto'
+alias dir='ls -l'
+alias dira='ls -la'
+
+# distrobox
+alias dev='distrobox enter dev'
+alias prod='distrobox enter prod'

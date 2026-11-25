@@ -1,9 +1,5 @@
 #!/usr/bin/bash
 
-mkdir Personal
-mkdir Code
-mkdir VMs
-
 sudo rpm-ostree install \
     chromium \
     lm_sensors \
@@ -29,6 +25,7 @@ sudo flatpak install \
     org.mozilla.thunderbird \
     org.gimp.GIMP \
     org.kde.kate \
+    org.gnome.gedit \
     org.fedoraproject.MediaWriter \
     se.sjoerd.Graphs \
     io.dbeaver.DBeaverCommunity \

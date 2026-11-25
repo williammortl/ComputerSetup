@@ -1,9 +1,5 @@
 #!/usr/bin/bash
 
-mkdir Personal
-mkdir Code
-mkdir VMs
-
 sudo dnf install \
     chromium \
     lm_sensors \
@@ -32,7 +28,11 @@ sudo flatpak install \
     org.fedoraproject.MediaWriter \
     se.sjoerd.Graphs \
     io.dbeaver.DBeaverCommunity \
-    io.podman_desktop.PodmanDesktop
+    io.podman_desktop.PodmanDesktop \
+    org.gnome.Epiphany \
+    org.kde.marknote \
+    org.kde.drawy \
+    org.gnome.Snapshot
 
 # Disable OpenSSH server and socket activation
 for unit in sshd.service sshd.socket; do

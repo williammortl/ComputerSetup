@@ -1,0 +1,8 @@
+BLUE='\[\e[38;5;81m\]'
+ORANGE='\[\e[38;5;202m\]'
+WHITE='\[\e[97m\]'
+GREEN='\[\e[32m\]'
+YELLOW='\[\e[33m\]'
+RESET='\[\e[0m\]'
+
+PS1="🐧 ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"

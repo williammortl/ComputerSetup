@@ -24,21 +24,7 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
-alias cls='clear && fastfetch'
-alias ls='LC_ALL=C ls -X --group-directories-first --color=auto'
-alias dir='ls -l'
-alias dira='ls -la'
+export PATH="$PATH:/home/wmortl/Applications"
 
-BLUE='\[\e[38;5;81m\]'
-ORANGE='\[\e[38;5;202m\]'
-WHITE='\[\e[97m\]'
-GREEN='\[\e[32m\]'
-YELLOW='\[\e[33m\]'
-RESET='\[\e[0m\]'
-
-PS1="🐧 ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
-
-export PATH="$PATH:/var/home/wmortl/Applications"
-
-alias dev='cd ~/Dev && distrobox enter development'
-
+. .aliases
+. .prompt
