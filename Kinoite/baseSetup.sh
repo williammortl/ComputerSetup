@@ -33,7 +33,8 @@ sudo flatpak install \
     org.gnome.Epiphany \
     org.kde.marknote \
     org.kde.drawy \
-    org.gnome.Snapshot
+    org.gnome.Snapshot \
+    org.remmina.Remmina
 
 # Disable OpenSSH server and socket activation
 for unit in sshd.service sshd.socket; do
