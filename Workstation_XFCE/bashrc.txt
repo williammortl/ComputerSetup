@@ -26,5 +26,6 @@ unset rc
 
 export PATH="$PATH:/home/wmortl/Applications"
 
-. .aliases
-. .prompt
+. ~/.aliases
+. ~/.prompt
+
