@@ -35,7 +35,8 @@ sudo flatpak install \
     io.podman_desktop.PodmanDesktop \
     org.gnome.Epiphany \
     org.kde.marknote \
-    org.kde.drawy
+    org.kde.drawy \
+    org.gnome.Snapshot
 
 # Disable OpenSSH server and socket activation
 for unit in sshd.service sshd.socket; do
