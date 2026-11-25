@@ -36,7 +36,7 @@ GREEN='\[\e[32m\]'
 YELLOW='\[\e[33m\]'
 RESET='\[\e[0m\]'
 
-PS1="📦 ${WHITE}[${ORANGE}Dev${WHITE}] ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
+PS1="📦 ${WHITE}[${ORANGE}${CONTAINER_ID}${WHITE}] ${RESET}${BLUE}\u${RESET}${GREEN}@${RESET}${WHITE}\h ${ORANGE}\w ${GREEN}% ${WHITE}"
 
 . "$HOME/.cargo/env"
 
