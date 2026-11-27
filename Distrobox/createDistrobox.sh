@@ -7,7 +7,16 @@
 distrobox create \
   --name dev \
   --image registry.fedoraproject.org/fedora:45 \
-  --home /var/home/wmortl/Dev \
+  --home /var/home/wmortl/Boxes/dev \
+  --dry-run \
+  | sed 's/:ro:rslave/:ro,rslave/g' \
+  | tr '\n' ' ' \
+  | sh
+
+distrobox create \
+  --name deb \
+  --image debian:stable \
+  --home /var/home/wmortl/Boxes/deb \
   --dry-run \
   | sed 's/:ro:rslave/:ro,rslave/g' \
   | tr '\n' ' ' \

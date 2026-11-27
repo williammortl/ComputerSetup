@@ -2,7 +2,7 @@
 
 sudo dnf update --refresh
 sudo dnf install \
-    vim neovim curl wget fastfetch \
+    vim curl wget fastfetch \
     texlive-scheme-medium texstudio \
     vlc
 
